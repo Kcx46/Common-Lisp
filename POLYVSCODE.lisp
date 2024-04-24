@@ -9,7 +9,7 @@
 ;p '(x)= + 12x^2 + 6x + 2 
 ;p''(x)= + 24x + 6 ;
 
-
+;I decleared some global variables
 (defvar *polynomial* '())
 (defvar *polynomial2* '())
 (defvar *polynomial-result* '())
@@ -17,7 +17,7 @@
 
 
 
-
+;functions declarations
 (defun add-term (coeficiente grado)
   (push (cons coeficiente grado) *polynomial*)
   (setf *polynomial* (sort *polynomial* #'> :key #'cdr)))
@@ -341,6 +341,7 @@
 (setq *polynomial* nil)
 (setq *polynomial2* nil)
 
+;functions calls
 (add-term 4 3)
 (add-term 3 2)
 (add-term 2 1) 
